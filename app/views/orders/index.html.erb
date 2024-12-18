@@ -1,0 +1,15 @@
+<h1>Orders</h1>
+
+<div id="orders">
+  <% @orders.each do |order| %>
+    <div class="order-item">
+      <p><strong>Order ID:</strong> <%= order.id %></p>
+      <p><strong>Total:</strong> <%= order.total %></p>
+
+      <!-- Link to order show page -->
+      <%= link_to "View Order", order_path(order) %>
+    </div>
+    <hr>
+  <% end %>
+</div>
+
